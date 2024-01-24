@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+:root {
+  --color-primary: #cabd89;
+  --color-background: #000000;
+}
+
+body {
+  color: rgb(var(--color-text));
+  background: var(--color-background);
+}
+
+.text-gradient-gold {
+  background: -webkit-linear-gradient(#918863, #fffdb8);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.gradient-gold {
+  background: -webkit-linear-gradient(#918863, #fffdb8);
+}
