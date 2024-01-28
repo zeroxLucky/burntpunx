@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { NextUIProvider } from "@nextui-org/react";
 
 export const metadata: Metadata = {
   title: "Hoodie Cartel",

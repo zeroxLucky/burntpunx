@@ -5,6 +5,7 @@ const Logo = () => {
   return (
     <div className="logo w-100 flex flex-row justify-center overflow-visible">
       <Image
+        priority={true}
         src={Logomark}
         alt="logo"
         sizes="600px"

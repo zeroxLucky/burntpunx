@@ -1,23 +1,61 @@
 import React from "react";
 import Button from "./Button";
 import StayBundled from "./Bundled";
-import { Modal as NextModal, ModalContent, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/modal";
+import {
+  Modal as NextModal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+} from "@nextui-org/modal";
 
-export default function Modal({ isOpen, title, body, onClose }: { isOpen: boolean, title: string, body: string, onClose: any })
-{
+export default function Modal({
+  open,
+  title,
+  closeLabel,
+  body,
+  onClose,
+}: {
+  open: boolean;
+  closeLabel?: string;
+  title?: string | React.JSX.Element;
+  body?: string | React.JSX.Element;
+  onClose?: any;
+}) {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <>
-      <NextModal isOpen={isOpen} className="bg-black h-full w-full">
-        <ModalContent>
-          <ModalHeader className="flex flex-col gap-1">{title}</ModalHeader>
-          <ModalBody>{body}</ModalBody>
-          <ModalFooter>
-            <StayBundled />
-            {onClose ? <Button onPress={onClose} label={'Close'} /> : null}
-          </ModalFooter>
-        </ModalContent>
-      </NextModal>
-    </>
+    <NextModal
+      className="h-full w-full fixed top-0 left-0 bg-black text-gold  text-center"
+      isOpen={open}
+      placement="center"
+      isDismissable={false}
+      hideCloseButton={true}
+      size={"full"}
+    >
+      <ModalContent className="text-center bg-black flex ">
+        <ModalHeader className="w-full align-center justify-center self-center text-center max-w-sm px-12 pt-12 pb-0 mt-6 text-4xl cursive">
+          {title}
+        </ModalHeader>
+        <ModalBody className=" font-serif self-center justify-center text-justify max-w-lg">
+          {body}
+        </ModalBody>
+        <div className="w-full text-center pb-12">
+          <StayBundled />
+        </div>
+        <ModalFooter>
+          <div className="pb-3 w-full ">
+            {onClose ? (
+              <Button
+                onPress={onClose}
+                label={closeLabel ?? "OK"}
+                classNames="max-w-lg"
+              />
+            ) : null}
+          </div>
+        </ModalFooter>
+      </ModalContent>
+    </NextModal>
   );
 }

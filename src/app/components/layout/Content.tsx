@@ -8,8 +8,8 @@ const Content = ({
   view,
   setView,
 }: {
-  view: string;
-  setView(arg: string): void;
+  view: boolean | string;
+  setView(arg: string | boolean): void;
 }) => {
   return (
     <div className="flex flex-1 flex-col w-full px-6 items-center">

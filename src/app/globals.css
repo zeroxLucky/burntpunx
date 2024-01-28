@@ -30,10 +30,6 @@ body {
   background: var(--color-background);
 }
 
-header .logo {
-  /*  filter: drop-shadow(0px 0px 15px #333);*/
-}
-
 .cursive {
   font-family: 'Great Vibes', cursive;
   letter-spacing: 1.5px;
@@ -46,10 +42,7 @@ header .logo {
 
 .text-gold {
   color: #cabd89;
-  background: -webkit-linear-gradient(#918863, #fffdb8);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+
 }
 
 .gold {

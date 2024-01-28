@@ -9,7 +9,7 @@
     "package-lock.json": true,
     ".gitignore": true,
     "README.md": true,
-    "tailwind.config.ts": true,
+    "tailwind.config.ts": false,
     "tsconfig.json": true,
     "postcss.config.js": true,
     "next.config.mjs": true,
