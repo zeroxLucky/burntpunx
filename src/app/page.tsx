@@ -8,7 +8,7 @@ export default function Page() {
   const [view, setView] = useState("frame");
 
   return (
-    <main className="w-100 flex flex-col h-[100vh] relative">
+    <main className="w-100 flex flex-col">
       <Header />
       <Content view={view} setView={setView} />
       <Footer />

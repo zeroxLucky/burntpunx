@@ -5,8 +5,8 @@ import commonGroundIcon from "../../util/icons/common-ground.svg";
 
 const Footer = () => {
   return (
-    <footer className="w-100 flex place-content-center justify-self-end p-8">
-      <div className="flex flex-row justify-center items-center max-w-xs">
+    <footer className="w-full flex place-content-center justify-self-end p-3 absolute bottom-0">
+      <div className="flex flex-row justify-center items-center max-w-xs self-center">
         <a
           className="w-100 max-w-12 p-3"
           target="_blank"
@@ -14,7 +14,7 @@ const Footer = () => {
         >
           <Image
             src={xIcon}
-            alt="logo"
+            alt="x icon"
             sizes="40px"
             style={{ objectFit: "contain" }}
           />
@@ -26,7 +26,7 @@ const Footer = () => {
         >
           <Image
             src={discordIcon}
-            alt="logo"
+            alt="discord icon"
             sizes="40px"
             style={{ objectFit: "contain" }}
           />
@@ -38,7 +38,7 @@ const Footer = () => {
         >
           <Image
             src={commonGroundIcon}
-            alt="logo"
+            alt="commond ground icon"
             sizes="40px"
             style={{ objectFit: "contain" }}
           />
@@ -50,7 +50,7 @@ const Footer = () => {
         >
           <Image
             src={xIcon}
-            alt="logo"
+            alt="x icon"
             sizes="40px"
             style={{ objectFit: "contain" }}
           />

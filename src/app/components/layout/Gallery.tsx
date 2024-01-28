@@ -37,7 +37,7 @@ const Gallery = ({ onClose }: { onClose(arg: string): void }) => {
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-3 flex-1 w-full content-start">
+      <div className="grid grid-cols-3 gap-3 flex-1 w-full content-start pb-3">
         <Grid data={MintCollection} />
       </div>
       <Button label="Back to Mint" onPress={handleClick} />

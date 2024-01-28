@@ -17,9 +17,21 @@
   src: url(../assets/fonts/DigitalNumbers-Regular.ttf);
 }
 
+html {
+  height: stretch;
+  height: -webkit-stretch;
+}
+
 body {
+  min-height: 100lvh;
+  min-height: stretch;
+  min-height: stretch;
   color: var(--color-text);
   background: var(--color-background);
+}
+
+header .logo {
+  /*  filter: drop-shadow(0px 0px 15px #333);*/
 }
 
 .cursive {

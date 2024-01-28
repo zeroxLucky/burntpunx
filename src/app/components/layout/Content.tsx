@@ -13,14 +13,14 @@ const Content = ({
 }) => {
   return (
     <div className="flex flex-1 flex-col w-full px-6 items-center">
-      <div className="flex flex-1 flex-col px-6 mt-6 pt-6 w-full max-w-sm h-full">
+      <div className="flex flex-1 flex-col px-6 w-full max-w-sm h-full">
         {view == "frame" ? (
           <>
             <div className="flex-1">
               <Frame />
               <DisplayGrid />
             </div>
-            <div className="flex flex-col w-auto text-center justify-center gap-3">
+            <div className="flex flex-col w-auto text-center justify-center gap-3 mt-1">
               <Button
                 label="Connect Wallet"
                 onPress={() => setView("gallery")}
