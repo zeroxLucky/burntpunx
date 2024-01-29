@@ -9,11 +9,11 @@ import { isMobile } from "react-device-detect";
 import { NextUIProvider } from "@nextui-org/react";
 
 export default function Page() {
-  const [view, setView] = useState(false);
+  const [view, setView] = useState("");
   const [dialog, setDialog] = useState({
     open: false,
-    title: "",
-    body: "",
+    title: <></>,
+    body: <></>,
     onClose: () => {},
   });
 
@@ -30,13 +30,10 @@ export default function Page() {
           onClose: () => {
             const d = {
               open: false,
-              title: "",
-              body: "",
+              title: <></>,
+              body: <></>,
               onClose: () => {},
             };
-            const val = new Date().toISOString();
-            console.log("accepted tos", val);
-            console.log(d);
             localStorage.setItem("accepted_tos", new Date().toISOString());
             setDialog(d);
           },
@@ -46,10 +43,10 @@ export default function Page() {
     } else {
       const desktop_dialog = {
         open: true,
-        onClose: false,
+        onClose: () => { },
         hideCloseButton: true,
-        title: Language.MODAL.DEFAULT.title,
-        body: Language.MODAL.DESKTOP_ONLY.body,
+        title:  Language.MODAL.DEFAULT.title,
+        body:Language.MODAL.DESKTOP_ONLY.body,
       };
       setDialog(desktop_dialog);
     }
@@ -67,7 +64,7 @@ export default function Page() {
 
           <Content
             view={view}
-            setView={(e) => {
+            setView={(e:string) => {
               setView(e);
             }}
           />
