@@ -3,6 +3,7 @@ import Frame from "../view/Frame";
 import Gallery from "./Gallery";
 import DisplayGrid from "../view/DisplayGrid";
 import Button from "../common/Button";
+import ConnectButton from "../web3/ConnectButton";
 
 const Content = ({
   view,
@@ -21,12 +22,7 @@ const Content = ({
               <DisplayGrid />
             </div>
             <div className="flex flex-col w-auto text-center justify-center gap-3 mt-1">
-              <Button
-                label="Connect Wallet"
-                onPress={() => setView("gallery")}
-                //classNames="border-green text-green"
-                classNames="border-purple text-purple"
-              />
+              <ConnectButton />
               <Button
                 //classNames="border-purple text-purple"
                 label="View Owned"

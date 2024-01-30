@@ -14,9 +14,8 @@
 
 @font-face {
   font-family: DigitalNumbers;
-  src: url(../assets/fonts/DigitalNumbers-Regular.ttf);
+  src: url("../assets/fonts/DigitalNumbers-Regular.ttf")
 }
-
 html {
   height: stretch;
   height: -webkit-stretch;
@@ -114,7 +113,7 @@ body {
   right: -500px;
   bottom: -500px;
   left: -500px;
-  background: transparent url(../assets/images/static.png) 0 0;
+  background: transparent url("../assets/images/static.png") 0 0;
   background-size: 320px 320px;
   opacity: .35;
   animation: tv-static 1s steps(8, end) infinite both;
