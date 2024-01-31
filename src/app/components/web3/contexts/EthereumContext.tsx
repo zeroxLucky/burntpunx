@@ -2,13 +2,13 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 import { ethers } from 'ethers'
 import Onboard, { OnboardAPI } from '@web3-onboard/core'
 import injectedModule from '@web3-onboard/injected-wallets'
+import luksoModule from '@lukso/web3-onboard-config'
 import supportedNetworks from '../../../constants/SupportedNetworks.json'
 import { config } from '../config'
 import { ConnectModalOptions } from '@web3-onboard/core/dist/types'
-import lukso from '@lukso/web3-onboard-config'
 
 // Web3-Onboard: LUKSO provider initialization
-//  luksoModule()
+const onboardLuksoProvider = luksoModule()
 
 // Web3-Onboard: Set up injected interface
 const injected = injectedModule({
@@ -40,12 +40,12 @@ const onboardAppMetadata = {
    * Icon shows behind the extension icon
    * on the right wallet side
    */
-  icon: '/lukso_wordmark_black.svg',
+  icon: '/img/icon.png',
   /**
    * Logo shows left of the provider
    * window, indicating the used app
    */
-  logo: '/lukso_wordmark_fuchsia.svg',
+  logo: '/img/logo.png',
   description: config.metadata.description,
   recommendedInjectedWallets: [
     {
@@ -130,6 +130,21 @@ export function EthereumProvider({ children }: { children: React.ReactNode }) {
 
   // Initialize the provider and listen for account/chain changes
   useEffect(() => {
+    const updateAccountInfo = async (newAccount: string) => {
+      setAccount(newAccount)
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('ethereumAccount', newAccount) // save account to local storage
+      }
+    }
+
+    // Load account from localStorage if available
+    const storedAccount =
+      typeof window !== 'undefined'
+        ? localStorage.getItem('ethereumAccount')
+        : null
+    if (storedAccount) {
+      updateAccountInfo(storedAccount)
+    }
     /*
      * Check if the Universal Profile extension or regular
      * wallet injected the related window object
@@ -141,13 +156,21 @@ export function EthereumProvider({ children }: { children: React.ReactNode }) {
       const provider = new ethers.BrowserProvider(providerObject)
       setProvider(provider)
 
+      // Update address of the UP on profile swap
       providerObject.on('accountsChanged', (accounts: string[]) => {
-        setAccount(accounts[0] || null)
+        updateAccountInfo(accounts[0])
       })
 
-      // Reload the page when the chain changes
+      // Update address of the UP on chain swap
       providerObject.on('chainChanged', () => {
-        window.location.reload()
+        /**
+         * Clear the account from local storage and state
+         * as smart contract address of UP will change
+         */
+        if (typeof window !== 'undefined') {
+          localStorage.removeItem('ethereumAccount')
+        }
+        setAccount(null)
       })
     } else {
       console.log('No wallet extension found')

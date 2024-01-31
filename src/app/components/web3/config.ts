@@ -3,8 +3,8 @@
  */
 export const config = {
   metadata: {
-    title: 'LUKSO dApp Boilerplate',
-    description: 'Open Source LUKSO Dev Stack',
+    title: 'Universal Punx by Hoodie Cartel',
+    description: 'Universal Punx by Hoodie Cartel',
   },
   extension: {
     name: 'Universal Profiles',

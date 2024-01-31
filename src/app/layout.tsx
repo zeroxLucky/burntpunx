@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { NextUIProvider } from "@nextui-org/react";
-
 export const metadata: Metadata = {
   title: "Hoodie Cartel",
   description: "UniversalPunx",
@@ -13,7 +11,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-US">
       <body>{children}</body>
     </html>
   );
