@@ -1,12 +1,11 @@
 import Image from "next/image";
-import Logomark from "../../../../public/img/logo.png";
 
 const Logo = () => {
   return (
     <div className="logo w-100 flex flex-row justify-center overflow-visible">
       <Image
         priority={true}
-        src={Logomark}
+        src="/img/logo.png"
         alt="logo"
         sizes="600px"
         style={{
