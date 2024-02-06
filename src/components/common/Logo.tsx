@@ -8,6 +8,8 @@ const Logo = () => {
         src="/img/logo.png"
         alt="logo"
         sizes="600px"
+        width={600}
+        height={600}
         style={{
           width: "75%",
           maxWidth: "366px",

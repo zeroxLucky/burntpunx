@@ -1,7 +1,7 @@
 import Image from "next/image";
-import xIcon from "../../util/icons/x.svg";
-import discordIcon from "../../util/icons/discord.svg";
-import commonGroundIcon from "../../util/icons/common-ground.svg";
+import xIcon from "@/utils/icons/x.svg";
+import discordIcon from "@/utils/icons/discord.svg";
+import commonGroundIcon from "@/utils/icons/common-ground.svg";
 
 const Footer = () => {
   return (
@@ -16,6 +16,8 @@ const Footer = () => {
             src={xIcon}
             alt="x icon"
             sizes="40px"
+            width={40}
+            height={40}
             style={{ objectFit: "contain" }}
           />
         </a>
@@ -28,6 +30,8 @@ const Footer = () => {
             src={discordIcon}
             alt="discord icon"
             sizes="40px"
+            width={40}
+            height={40}
             style={{ objectFit: "contain" }}
           />
         </a>
@@ -40,6 +44,8 @@ const Footer = () => {
             src={commonGroundIcon}
             alt="commond ground icon"
             sizes="40px"
+            width={40}
+            height={40}
             style={{ objectFit: "contain" }}
           />
         </a>
@@ -52,6 +58,8 @@ const Footer = () => {
             src={xIcon}
             alt="x icon"
             sizes="40px"
+            width={40}
+            height={40}
             style={{ objectFit: "contain" }}
           />
         </a>
