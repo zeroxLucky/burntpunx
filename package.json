@@ -15,6 +15,7 @@
     "@lukso/web3-onboard-config": "^1.1.1",
     "@nextui-org/modal": "^2.0.28",
     "@nextui-org/react": "^2.2.9",
+    "@tanstack/react-query": "^5.18.1",
     "@web3-onboard/core": "^2.21.2",
     "@web3-onboard/injected-wallets": "^2.10.11",
     "ethereum-blockies-base64": "^1.0.2",
@@ -25,16 +26,20 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "^18",
     "sharp": "^0.33.2",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.1.8",
+    "viem": "2.x",
+    "wagmi": "^2.5.6"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "encoding": "^0.1.13",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "only-allow": "^1.2.1",
+    "pino-pretty": "^10.3.1",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
