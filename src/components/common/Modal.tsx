@@ -38,7 +38,7 @@ export default function Modal({
         <ModalHeader className="w-full align-center justify-center self-center text-center max-w-sm px-12 pt-12 pb-0 mt-6 text-4xl cursive">
           {title}
         </ModalHeader>
-        <ModalBody className=" font-serif self-center justify-center text-justify max-w-lg">
+        <ModalBody className="font-serif self-center justify-center text-justify max-w-lg">
           {body}
         </ModalBody>
         <div className="w-full text-center pb-12">

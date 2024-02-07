@@ -43,19 +43,16 @@ export default function Page() {
     } else {
       const desktop_dialog = {
         open: true,
-        onClose: () => { },
+        onClose: () => {},
         hideCloseButton: true,
-        title:  Language.MODAL.DEFAULT.title,
-        body:Language.MODAL.DESKTOP_ONLY.body,
+        title: Language.MODAL.DEFAULT.title,
+        body: Language.MODAL.DESKTOP_ONLY.body,
       };
       setDialog(desktop_dialog);
     }
     setView("frame");
   }, []);
 
-  useEffect(() => {
-    console.log(dialog);
-  }, [dialog]);
   return (
     <NextUIProvider>
       {view ? (
@@ -64,7 +61,7 @@ export default function Page() {
 
           <Content
             view={view}
-            setView={(e:string) => {
+            setView={(e: string) => {
               setView(e);
             }}
           />

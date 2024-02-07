@@ -12,9 +12,9 @@ const LANGUAGE = {
     },
     DISCLAIMER: {
       body: (
-        <div className="border rounded-md p-6 text-justify leading-loose max-h-96 overflow-scroll bg-gray-300 text-black">
+        <div className="border rounded-md p-6 text-justify leading-loose max-h-96 overflow-scroll">
           By minting this NFT you are agreeing to be contractually obligated to
-          burn it at a later date.Each NFT will be redeemable for one( 1 )
+          burn it at a later date. Each NFT will be redeemable for one( 1 )
           limited edition gold trait (Gold Hoodies EXCLUDED) in the
           UniversalPunX decentralized application. You will have the choice to
           add above mentioned gold trait ( s ) to individual UniversalPunX or
@@ -22,7 +22,7 @@ const LANGUAGE = {
           the right to expire this offer at any time, the attached ipfs image
           may also be terminated at any time. We do not condone trading of this
           NFT and there should be no expectation that this NFT should increase
-          in value, for that reason we have applied a contract enforced 42%
+          in value, for that reason we have applied a contract enforced 6.9%
           royalty. Mint accordingly degens.
         </div>
       ),
