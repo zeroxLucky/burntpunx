@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
-import Content from "./components/layout/Content";
-import Modal from "./components/common/Modal";
-import Language from "./constants/language";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import Content from "@/components/layout/Content";
+import Modal from "@/components/common/Modal";
+import Language from "@/constants/language";
 import { isMobile } from "react-device-detect";
 import { NextUIProvider } from "@nextui-org/react";
 
