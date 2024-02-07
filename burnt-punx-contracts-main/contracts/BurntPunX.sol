@@ -75,7 +75,7 @@ contract BurntPunX is LSP8IdentifiableDigitalAsset, ReentrancyGuard {
     }
     function setBaseURI(string memory _baseURI) external onlyAuthorizedAgent {
         bytes memory baseURI = bytes(_baseURI);
-       _setData(_LSP8_TOKEN_METADATA_BASE_URI, bytes.concat(bytes4(0),baseURI));
+       _setData(_LSP8_TOKEN_METADATA_BASE_URI, bytes.concat(bytes8(0),baseURI));
     }
     function tokenSupplyCap() public view virtual returns (uint256) {
         return MAX_SUPPLY;
