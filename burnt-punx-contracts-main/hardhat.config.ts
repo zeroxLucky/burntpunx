@@ -26,34 +26,34 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIVATEKEY_MAINNET || '']
     },
   },
-  gasReporter: {
-    enabled: process.env.REPORT_GAS !== undefined,
-    currency: "USD",
-  },
-  etherscan: {
-    apiKey: {
-      testnet: 'no-api-key-needed',
-      mainnet: 'no-api-key-needed'
-    },
-    customChains: [
-      {
-        network: "testnet",
-        chainId: 4201,
-        urls: {
-          apiURL: "https://api.explorer.execution.testnet.lukso.network/api",
-          browserURL: "https://explorer.execution.testnet.lukso.network",
-        },
-      },
-      {
-        network: 'mainnet',
-        chainId: 42,
-        urls: {
-          apiURL: 'https://api.explorer.execution.mainnet.lukso.network/api',
-          browserURL: 'https://explorer.execution.mainnet.lukso.network',
-        },
-      },
-    ],
-  },
+  // gasReporter: {
+  //   enabled: process.env.REPORT_GAS !== undefined,
+  //   currency: "USD",
+  // },
+  // etherscan: {
+  //   apiKey: {
+  //     testnet: 'no-api-key-needed',
+  //     mainnet: 'no-api-key-needed'
+  //   },
+  //   customChains: [
+  //     {
+  //       network: "testnet",
+  //       chainId: 4201,
+  //       urls: {
+  //         apiURL: "https://api.explorer.execution.testnet.lukso.network/api",
+  //         browserURL: "https://explorer.execution.testnet.lukso.network",
+  //       },
+  //     },
+  //     {
+  //       network: 'mainnet',
+  //       chainId: 42,
+  //       urls: {
+  //         apiURL: 'https://api.explorer.execution.mainnet.lukso.network/api',
+  //         browserURL: 'https://explorer.execution.mainnet.lukso.network',
+  //       },
+  //     },
+  //   ],
+  // },
 };
 
 export default config;
