@@ -2,6 +2,7 @@ import { http, createConfig } from "wagmi";
 import { lukso } from "wagmi/chains";
 import { injected } from "wagmi/connectors";
 import { type Chain } from "viem";
+import { type InjectedParameters } from "@wagmi/connectors";
 
 export const luksotest = {
   id: 4201,
@@ -28,6 +29,7 @@ export const luksotest = {
 
 export const config = createConfig({
   chains: [luksotest, lukso],
+  multiInjectedProviderDiscovery: false,
   connectors: [injected()],
   ssr: true,
   transports: {

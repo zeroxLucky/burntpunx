@@ -13,11 +13,15 @@ export default function ConnectButton() {
     return <Button onPress={() => disconnect()} label="Disconnect" />;
   }
 
-  return connectors.map((connector) => (
+  if (connectors.length === 0) {
+    return <div>No wallets available</div>;
+  }
+
+  return (
     <Button
-      key={connector.uid}
-      onPress={() => connect({ connector })}
-      label="Connect"
+      key={connectors[0].uid}
+      onPress={() => connect({ connector: connectors[0] })}
+      label="Connect Wallet"
     />
-  ));
+  );
 }
