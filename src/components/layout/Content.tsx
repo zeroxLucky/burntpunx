@@ -1,5 +1,4 @@
 import React from "react";
-import Frame from "../view/Frame";
 import Gallery from "./Gallery";
 import DisplayGrid from "../view/DisplayGrid";
 import Button from "../common/Button";
@@ -18,10 +17,9 @@ const Content = ({
         {view == "frame" ? (
           <>
             <div className="flex-1">
-              <Frame />
               <DisplayGrid />
             </div>
-            <div className="flex flex-col w-auto text-center justify-center gap-3 mt-1">
+            <div className="flex flex-col w-auto text-center justify-center gap-3">
               <ConnectButton />
               <Button
                 //classNames="border-purple text-purple"
