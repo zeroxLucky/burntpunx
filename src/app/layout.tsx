@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-US">
+    <html lang="en-US" className="bg-black">
       <body>
         <Providers>{children}</Providers>
       </body>

@@ -9,7 +9,7 @@ export default function MainLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="w-100 flex flex-col">
+    <main className="w-100 h-screen flex flex-col">
       <Header />
       <MobileModal />
       <TOSModal />
