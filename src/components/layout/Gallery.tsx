@@ -1,15 +1,11 @@
+"use client";
 import React from "react";
 import Button from "../common/Button";
-import Default from "../../../assets/images/default.png";
 interface GridItem {
   url?: string;
 }
 
-const Gallery = ({ onClose }: { onClose(arg: string): void }) => {
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    return onClose("frame");
-  };
-
+const Gallery = () => {
   const placeholder: GridItem = { url: " " };
   const MintCollection: GridItem[] = [
     placeholder,
@@ -37,10 +33,9 @@ const Gallery = ({ onClose }: { onClose(arg: string): void }) => {
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-3 flex-1 w-full content-start pb-3">
+      <div className="grid grid-cols-3 gap-3 flex-1 w-full content-start">
         <Grid data={MintCollection} />
       </div>
-      <Button label="Back to Mint" onPress={handleClick} />
     </>
   );
 };

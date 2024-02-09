@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { useEffect, useState } from "react";
 import Button from "./Button";
 import StayBundled from "./Bundled";
 import {
@@ -7,23 +8,18 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
-  useDisclosure,
 } from "@nextui-org/modal";
 
-export default function Modal({
-  open,
-  title,
-  closeLabel,
-  body,
-  onClose,
-}: {
-  open: boolean;
-  closeLabel?: string;
-  title?: string | React.JSX.Element;
-  body?: string | React.JSX.Element;
-  onClose?: any;
-}) {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+export default function MobileModal() {
+  const [open, setOpen] = useState(false);
+
+  // check for mobile device on load
+  useEffect(() => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      setOpen(true);
+    }
+  }, []);
 
   return (
     <NextModal
@@ -36,23 +32,30 @@ export default function Modal({
     >
       <ModalContent className="text-center bg-black flex ">
         <ModalHeader className="w-full align-center justify-center self-center text-center max-w-sm px-12 pt-12 pb-0 mt-6 text-4xl cursive">
-          {title}
+          <div className="modal-title">
+            <div className="text-xs mb-2 font-medium digital tracking-[.3em]">
+              A Note From
+            </div>
+            <div className="cursive font-medium">The Hoodie Cartel</div>
+          </div>
         </ModalHeader>
         <ModalBody className="font-serif self-center justify-center text-justify max-w-lg">
-          {body}
+          <div className="px-6  text-center">
+            <div className="p-6 border rounded-md">
+              Sorry for the inconvenience this mint is only available on desktop
+            </div>
+          </div>
         </ModalBody>
         <div className="w-full text-center pb-12">
           <StayBundled />
         </div>
         <ModalFooter>
           <div className="pb-3 w-full ">
-            {onClose ? (
-              <Button
-                onPress={onClose}
-                label={closeLabel ?? "OK"}
-                classNames="max-w-lg"
-              />
-            ) : null}
+            <Button
+              onPress={() => setOpen(false)}
+              label="OK"
+              classNames="max-w-lg"
+            />
           </div>
         </ModalFooter>
       </ModalContent>

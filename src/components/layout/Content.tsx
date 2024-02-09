@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Gallery from "./Gallery";
 import DisplayGrid from "../view/DisplayGrid";

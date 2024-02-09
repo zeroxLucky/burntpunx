@@ -1,9 +1,0 @@
-[
-  {
-    "name": "LUKSO Testnet",
-    "chainId": "4201",
-    "rpcUrl": "https://rpc.testnet.lukso.gateway.fm",
-    "ipfsGateway": "https://api.universalprofile.cloud/ipfs",
-    "token": "LYXt"
-  }
-]

@@ -267,10 +267,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.3.1.tgz#d0fce5d07b0620caa282b5131c297bb60f9d87e6"
   integrity sha512-EsBwpc7hBUJWAsNPBmJy4hxWx12v6bshQsldrVmjxJoc3isbxhOrF2IcCpaXxfvq03NwkI7sbsOLXbYuqF/8Ww==
 
-"@erc725/erc725.js@^0.22.0":
-  version "0.22.0"
-  resolved "https://registry.yarnpkg.com/@erc725/erc725.js/-/erc725.js-0.22.0.tgz#b091662c2c4e2836e14075f2ff38713c5a33b5d6"
-  integrity sha512-8PW5IV9Ey/1SA+ouQVekdFfj2gb74u8hM211bR26aiC79n9X1kf25hID25CIpca3fA4+MTall5YnqK1vXP6m7A==
+"@erc725/erc725.js@^0.23.0":
+  version "0.23.0"
+  resolved "https://registry.yarnpkg.com/@erc725/erc725.js/-/erc725.js-0.23.0.tgz#e3e929687977aea3fef8617e62e2191518a37f16"
+  integrity sha512-v2qPnH7IXSh4td3br+LNXdhfiFrtx/AOBnNbFZKZVHQdVdapKAtZVmrKV1svTlztxxRgQQ24wLgEMkxr9GiguA==
   dependencies:
     add "^2.0.6"
     ethereumjs-util "^7.1.5"
