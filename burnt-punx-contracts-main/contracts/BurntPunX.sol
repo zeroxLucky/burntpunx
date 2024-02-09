@@ -61,6 +61,14 @@ contract BurntPunX is LSP8IdentifiableDigitalAsset, LSP8Enumerable, ReentrancyGu
             _mint(_receiver, bytes32(tokenId), false, "");
         }
     }
+
+    function burn(uin256[] _tokenIds) external {
+        for (uin256 i = 0; i < _tokenIds.length; i++) {
+            if(ownerOf(_tokenIds[i]) != msg.sender) revert Unauthorized();
+            _burn(_tokenIds[i], "");
+        }
+    }
+
     function mint(uint256 _amount) external payable nonReentrant isMintOpen {
         uint256 _totalSupply = totalSupply();
         if(_totalSupply + _amount > MAX_SUPPLY) revert BPunxMintingLimitExceeded(_amount);
