@@ -1,6 +1,6 @@
 // import { useEthereum } from './contexts/EthereumContext'
 "use client";
-import Button from "@/components/common/Button";
+import Button from "@/components/ui/Button";
 
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 

@@ -1,4 +1,4 @@
-import Counter from "../web3/Count";
+import Counter from "@/components/Counter";
 export default function Frame() {
   return (
     <div className="text-gold digital frame border rounded-md w-full aspect-square overflow-hidden relative">

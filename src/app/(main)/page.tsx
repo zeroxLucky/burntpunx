@@ -1,6 +1,6 @@
 import Frame from "@/components/layout/Frame";
 import MintDisplay from "@/components/layout/MintDisplay";
-import ConnectButton from "@/components/web3/ConnectButton";
+import ConnectButton from "@/components/ConnectButton";
 import Link from "next/link";
 
 export default function Page() {

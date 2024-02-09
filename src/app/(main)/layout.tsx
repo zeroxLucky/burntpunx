@@ -1,5 +1,5 @@
-import MobileModal from "@/components/common/MobileModal";
-import TOSModal from "@/components/common/TOSModal";
+import MobileModal from "@/components/layout/MobileModal";
+import TOSModal from "@/components/layout/TOSModal";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 

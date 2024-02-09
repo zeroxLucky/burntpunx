@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import Button from "./Button";
-import StayBundled from "./Bundled";
+import Button from "@/components/ui/Button";
+import StayBundled from "@/components/Bundled";
 import {
   Modal as NextModal,
   ModalContent,

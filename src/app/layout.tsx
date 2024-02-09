@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Providers } from "@/components/web3/contexts/Providers";
+import { Providers } from "@/components/contexts/Providers";
 
 export const metadata: Metadata = {
   title: "Hoodie Cartel",

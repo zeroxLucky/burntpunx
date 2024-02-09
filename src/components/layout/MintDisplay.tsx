@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import WalletStatus from "../web3/WalletStatus";
+import WalletStatus from "@/components/WalletStatus";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function MintDisplay() {
