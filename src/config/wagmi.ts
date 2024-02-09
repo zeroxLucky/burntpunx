@@ -30,19 +30,7 @@ export const luksotest = {
 export const config = createConfig({
   chains: [luksotest, lukso],
   multiInjectedProviderDiscovery: false,
-  connectors: [
-    injected({
-      target() {
-        return {
-          id: "4201",
-          name: "Universal Profile",
-          provider(window) {
-            return (window as any).lukso;
-          },
-        };
-      },
-    }),
-  ],
+  connectors: [injected()],
   ssr: true,
   transports: {
     [luksotest.id]: http(),
