@@ -16,6 +16,17 @@
   font-family: DigitalNumbers;
   src: url("../assets/fonts/DigitalNumbers-Regular.ttf");
 }
+
+@font-face {
+  font-family: Basker;
+  src: url("../assets/fonts/Baskervville-Regular.ttf");
+}
+
+@font-face {
+  font-family: Ephesis;
+  src: url("../assets/fonts/Ephesis-Regular.ttf");
+}
+
 html {
   height: stretch;
   height: -webkit-stretch;
@@ -30,12 +41,15 @@ body {
 }
 
 .cursive {
-  font-family: "Great Vibes", cursive;
-  letter-spacing: 1.5px;
+  font-family: Ephesis;
 }
 
 .digital {
   font-family: DigitalNumbers;
+}
+
+.basker {
+  font-family: Basker;
 }
 
 .text-gold {
