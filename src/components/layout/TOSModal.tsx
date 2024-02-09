@@ -44,12 +44,12 @@ export default function TOSModal() {
           </div>
         </ModalHeader>
         <ModalBody className="font-serif self-center justify-center text-justify max-w-lg">
-          <div className="border rounded-md p-6 text-justify leading-loose max-h-96 overflow-scroll">
+          <div className="border text-sm center rounded-md p-4 digital text-justify leading-loose">
             By minting this NFT you are agreeing to be contractually obligated
-            to burn it at a later date. Each NFT will be redeemable for one( 1 )
+            to burn it at a later date. Each NFT will be redeemable for one
             limited edition gold trait (Gold Hoodies EXCLUDED) in the
             UniversalPunX decentralized application. You will have the choice to
-            add above mentioned gold trait ( s ) to individual UniversalPunX or
+            add above mentioned gold trait to individual UniversalPunX or
             multiple gold traits to one UniversalPunX. The Hoodie Cartel
             reserves the right to expire this offer at any time, the attached
             ipfs image may also be terminated at any time. We do not condone
@@ -62,7 +62,7 @@ export default function TOSModal() {
           <StayBundled />
         </div>
         <ModalFooter>
-          <div className="pb-3 w-full ">
+          <div className="pb-3 w-full  ">
             <Button onPress={setTos} label="OK" classNames="max-w-lg" />
           </div>
         </ModalFooter>
