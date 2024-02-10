@@ -1,6 +1,6 @@
 export const mainnet_rpc = "https://rpc.mainnet.lukso.network";
 export const testnet_rpc = "https://rpc.testnet.lukso.network";
 
-export const contract_address = "0x47520e0f86eec60e957cae8e8031dc63ed0e7fe2";
-export const chill_address = "0xc744966E92C44cB151ED8277bbEd4626571A4a18";
-export const admin_address = "0x8bD33381B1F7ef3E6B82Dd65418abc10aD04C4Cc";
+export const contract_address = "0x66b738baea30243bfe4c168a11e79dd1f930e59c";
+export const chill_address = "0x5B8B0E44D4719F8A328470DcCD3746BFc73d6B14";
+export const admin_address = "0x0ddd3E1E9F4E1D6c50A22A276321186db39e6635";

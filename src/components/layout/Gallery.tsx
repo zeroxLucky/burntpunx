@@ -1,5 +1,5 @@
 "use client";
-import { contract_address, mainnet_rpc, testnet_rpc } from "@/config/consts";
+import { contract_address, mainnet_rpc } from "@/config/consts";
 import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
@@ -33,9 +33,7 @@ const Gallery = () => {
     const getMintCollection = async () => {
       if (address) {
         const chainId = await connector?.getChainId();
-        const provider = new ethers.JsonRpcProvider(
-          chainId == 42 ? mainnet_rpc : testnet_rpc
-        );
+        const provider = new ethers.JsonRpcProvider(mainnet_rpc);
 
         const contract = new ethers.Contract(
           contract_address,

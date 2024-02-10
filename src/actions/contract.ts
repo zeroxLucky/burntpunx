@@ -1,10 +1,10 @@
 "use server";
-import { contract_address, testnet_rpc } from "@/config/consts";
+import { contract_address, mainnet_rpc } from "@/config/consts";
 import { ethers } from "ethers";
 
 export const getCount = async () => {
   const totalSupply = 6900;
-  const provider = new ethers.JsonRpcProvider(testnet_rpc);
+  const provider = new ethers.JsonRpcProvider(mainnet_rpc);
   const contract = new ethers.Contract(
     contract_address,
     [
