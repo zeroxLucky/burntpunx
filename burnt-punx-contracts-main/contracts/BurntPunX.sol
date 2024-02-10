@@ -27,7 +27,7 @@ error Unauthorized();
 contract BurntPunX is LSP8IdentifiableDigitalAsset, LSP8Enumerable, ReentrancyGuard {
 
     uint256 public constant MAX_SUPPLY = 6900;
-    uint256 public constant TEAM_RESERVE = 169;
+    uint256 public constant TEAM_RESERVE = 5;
     uint256 public constant MAX_MINTABLE = 100;
     uint256 public constant PRICE = 4.2 ether;
     uint256 public constant CHILLPRICE = 6969;
@@ -36,6 +36,7 @@ contract BurntPunX is LSP8IdentifiableDigitalAsset, LSP8Enumerable, ReentrancyGu
     bool public mintOpen = false;
 
     ILSP7 _chillContract;
+    uint256 totalMinted;
     
     constructor() LSP8IdentifiableDigitalAsset(
         "Burnt PunX",
@@ -54,34 +55,31 @@ contract BurntPunX is LSP8IdentifiableDigitalAsset, LSP8Enumerable, ReentrancyGu
     }
     
     function mintTeamsAllocation(address _receiver) external onlyOwner {
-        uint256 _totalSupply = totalSupply();
-        require(_totalSupply < TEAM_RESERVE, "Team reserve already minted");
+        require(totalMinted < TEAM_RESERVE, "Team reserve already minted");
         for (uint256 i = 0; i < TEAM_RESERVE; i++) {
-            uint256 tokenId = ++_totalSupply;
+            uint256 tokenId = ++totalMinted;
             _mint(_receiver, bytes32(tokenId), false, "");
         }
     }
 
-    function burn(uin256[] _tokenIds) external {
-        for (uin256 i = 0; i < _tokenIds.length; i++) {
-            if(ownerOf(_tokenIds[i]) != msg.sender) revert Unauthorized();
+    function burn(bytes32[] memory _tokenIds) external {
+        for (uint256 i = 0; i < _tokenIds.length; i++) {
+            if(!_isOperatorOrOwner(msg.sender, _tokenIds[i])) revert Unauthorized();
             _burn(_tokenIds[i], "");
         }
     }
 
     function mint(uint256 _amount) external payable nonReentrant isMintOpen {
-        uint256 _totalSupply = totalSupply();
-        if(_totalSupply + _amount > MAX_SUPPLY) revert BPunxMintingLimitExceeded(_amount);
+        if(totalMinted + _amount > MAX_SUPPLY) revert BPunxMintingLimitExceeded(_amount);
         if(_amount > MAX_MINTABLE) revert BPunxMintingLimitExceeded(_amount);
         if(msg.value != PRICE * _amount) revert BPunxMintingPriceNotMet(_amount);
         for (uint256 i = 0; i < _amount; i++) {
-            uint256 tokenId = ++_totalSupply;
+            uint256 tokenId = ++totalMinted;
             _mint(msg.sender,bytes32(tokenId), false, "");
         }
     }
     function chillMint(uint256 _amount) external payable nonReentrant isMintOpen {
-        uint256 _totalSupply = totalSupply();
-        if(_totalSupply + _amount > MAX_SUPPLY) revert BPunxMintingLimitExceeded(_amount);
+        if(totalMinted + _amount > MAX_SUPPLY) revert BPunxMintingLimitExceeded(_amount);
         if(_amount > MAX_MINTABLE) revert BPunxMintingLimitExceeded(_amount);
 
         _chillContract.transfer(
@@ -98,7 +96,7 @@ contract BurntPunX is LSP8IdentifiableDigitalAsset, LSP8Enumerable, ReentrancyGu
         );
 
         for (uint256 i = 0; i < _amount; i++) {
-            uint256 tokenId = ++_totalSupply;
+            uint256 tokenId = ++totalMinted;
             _mint(msg.sender,bytes32(tokenId), false, "");
         }
     }
