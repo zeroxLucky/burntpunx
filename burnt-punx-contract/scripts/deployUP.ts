@@ -105,7 +105,7 @@ async function deployToken() {
 
   await tx.wait();
 
-  console.log("Custom token address: ", CustomTokenAddress);
+  console.log("Contract Deployed To: ", CustomTokenAddress);
 }
 
 deployToken()

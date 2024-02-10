@@ -36,7 +36,7 @@ contract BurntPunX is
     uint256 public constant TEAM_RESERVE = 169;
     uint256 public constant MAX_MINTABLE = 100;
     uint256 public constant PRICE = 4.2 ether;
-    uint256 public constant CHILLPRICE = 6969;
+    uint256 public constant CHILLPRICE = 6969 ether;
 
     address constant CHILL_TOKEN_ADDRESS =
         0x5B8B0E44D4719F8A328470DcCD3746BFc73d6B14;
