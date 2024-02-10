@@ -26,7 +26,7 @@ const LYXButton = () => {
       }}
       className="digital text-gold shrink-0 flex grow justify-center items-center border col-span-4 rounded-md text-right p-2"
     >
-      {chill ? "4.2k Chill" : "4.2 LYX"}
+      {chill ? "6,969 Chill" : "4.2 LYX"}
     </button>
   );
 };

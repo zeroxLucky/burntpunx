@@ -28,7 +28,7 @@ export default function Counter() {
 
   return (
     <div
-      className="ml-auto pt-1"
+      className="ml-auto pt-1 z-10 relative"
       style={{
         textOrientation: "upright",
         writingMode: "vertical-rl",

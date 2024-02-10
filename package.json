@@ -26,6 +26,7 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "^18",
     "sharp": "^0.33.2",
+    "sonner": "^1.4.0",
     "styled-components": "^6.1.8",
     "viem": "2.x",
     "wagmi": "^2.5.6"

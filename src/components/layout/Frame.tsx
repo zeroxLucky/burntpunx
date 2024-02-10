@@ -7,6 +7,7 @@ export default function Frame() {
   const { frameImage } = useMinter();
   return (
     <div className="text-gold digital frame border rounded-md w-full aspect-square overflow-hidden relative">
+      <Counter />
       {frameImage !== "" ? (
         <Image
           src={frameImage}
@@ -19,7 +20,6 @@ export default function Frame() {
         <div className="tv-static" />
       )}
 
-      <Counter />
     </div>
   );
 }

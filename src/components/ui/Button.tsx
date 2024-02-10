@@ -6,18 +6,24 @@ export const ButtonStyles =
 const Button = ({
   label,
   classNames,
+  children,
   onPress,
+  disabled,
 }: {
-  label: string;
+  label?: string;
   classNames?: string;
+  children?: React.ReactNode;
   onPress(e: React.MouseEvent<HTMLButtonElement>): void;
+  disabled?: boolean;
 }) => {
   return (
     <button
+      disabled={disabled}
       className={`${ButtonStyles} ${classNames ?? "text-gold "}`}
       onClick={onPress}
     >
-      <span>{label}</span>
+      {label && <span>{label}</span>}
+      {children}
     </button>
   );
 };
