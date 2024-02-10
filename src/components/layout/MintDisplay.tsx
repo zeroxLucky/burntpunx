@@ -41,7 +41,7 @@ const InputField = () => {
       value={count}
       onChange={(e) => {
         setCount(e.target.value);
-        if (parseInt(e.target.value) > 100 || parseInt(e.target.value) < 0) {
+        if (parseInt(e.target.value) > 100 || parseInt(e.target.value) < 1) {
           setError(true);
           console.log("error");
         } else {
