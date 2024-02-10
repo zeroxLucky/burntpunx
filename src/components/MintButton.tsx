@@ -35,7 +35,7 @@ const MintButton = () => {
           })
           .then(async (receipt) => {
             toast.success("Minted!");
-            await new Promise((resolve) => setTimeout(resolve, 5000));
+            await new Promise((resolve) => setTimeout(resolve, 10000));
             const tokens = await contract.tokenIdsOf(account.address);
             const token = tokens[tokens.length - 1];
             setFrameImage(
@@ -83,7 +83,7 @@ const MintButton = () => {
           })
           .then(async (receipt) => {
             toast.success("Minted!");
-            await new Promise((resolve) => setTimeout(resolve, 5000));
+            await new Promise((resolve) => setTimeout(resolve, 10000));
             const tokens = await contract.tokenIdsOf(account.address);
             const token = tokens[tokens.length - 1];
             setFrameImage(
