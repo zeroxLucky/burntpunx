@@ -62,7 +62,11 @@ const MintButton = () => {
         const access = new ethers.Contract(chill_address, lsp7.abi, provider);
 
         try {
-          await access.authorizeOperator(contract_address, ethers.parseEther(`${total}`), "0x");
+          await access.authorizeOperator(
+            contract_address,
+            ethers.parseEther(`${total}`),
+            "0x"
+          );
         } catch (e) {
           toast.error("Error authorizing chill");
           return;
@@ -79,6 +83,7 @@ const MintButton = () => {
           })
           .then(async (receipt) => {
             toast.success("Minted!");
+            await new Promise((resolve) => setTimeout(resolve, 5000));
             const tokens = await contract.tokenIdsOf(account.address);
             const token = tokens[tokens.length - 1];
             setFrameImage(
