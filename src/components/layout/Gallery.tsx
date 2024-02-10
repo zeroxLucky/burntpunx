@@ -6,6 +6,14 @@ import { useAccount } from "wagmi";
 import abi from "@/config/abi.json";
 import Image from "next/image";
 import ConnectButton from "../ConnectButton";
+import { useDisclosure } from "@nextui-org/modal";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+} from "@nextui-org/react";
 interface GridItem {
   url?: string;
   mintNumber?: number;
@@ -56,23 +64,55 @@ const Gallery = () => {
     getMintCollection();
   }, [address, connector]);
 
-  const GridItem = ({ item }: { item: any }) => (
-    <div className="border rounded-md text-white relative overflow-hidden aspect-square">
-      <div className="tv-static" />
-      {item.url && (
-        <Image
-          src={item.url}
-          alt="item image"
-          width={500}
-          height={500}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      )}
-      <div className="absolute text-gold digital text-xs p-1">
-        {item.mintNumber}
-      </div>
-    </div>
-  );
+  const GridItem = ({ item }: { item: any }) => {
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
+    return (
+      <>
+        <button
+          onClick={item.url ? onOpen : () => {}}
+          className="border rounded-md text-white relative overflow-hidden aspect-square"
+        >
+          <div className="tv-static" />
+          {item.url && (
+            <Image
+              src={item.url}
+              alt="item image"
+              width={500}
+              height={500}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          )}
+          <div className="absolute text-gold digital text-xs top-1 left-1">
+            {item.mintNumber}
+          </div>
+        </button>
+        <Modal
+          isOpen={isOpen}
+          onOpenChange={onOpenChange}
+          hideCloseButton
+          classNames={{
+            backdrop: "bg-black/70",
+          }}
+        >
+          <ModalContent className="p-0 m-0 gold">
+            {(onClose) => (
+              <>
+                <ModalBody className="p-[2px] m-0">
+                  <Image
+                    src={item.url}
+                    alt="item image"
+                    width={500}
+                    height={500}
+                    className="rounded-xl w-full h-full object-cover"
+                  />
+                </ModalBody>
+              </>
+            )}
+          </ModalContent>
+        </Modal>
+      </>
+    );
+  };
 
   const Grid = ({ data }: { data: Array<any> }) =>
     data.map((item, i) => <GridItem item={item} key={`grid-item-${i}`} />);
