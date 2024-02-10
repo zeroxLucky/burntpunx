@@ -14,38 +14,46 @@ const metadata_IPFS = "ipfs://QmXw3MtWYtnW1t9vmEKry1ooA2C6n7NP1amp62boyCjaMk";
 // load env vars
 dotenv.config();
 
-const encodedData = myErc725.encodeData([
-  {
-    keyName: "LSP8TokenMetadataBaseURI",
-    value: {
-      verification: { method: "0x00000000", data: "0x" },
-      url: baseuri_IPFS,
-    },
-  },
-  {
-    keyName: "LSP4Metadata",
-    value: {
-      json: json,
-      url: metadata_IPFS,
-    },
-  },
-  {
-    keyName: "LSP4Creators[]",
-    value: ["0x8bD33381B1F7ef3E6B82Dd65418abc10aD04C4Cc"],
-  },
-  {
-    keyName: "LSP4CreatorsMap:<address>",
-    dynamicKeyParts: ["0x8bD33381B1F7ef3E6B82Dd65418abc10aD04C4Cc"],
-    value: ["0x01ffc9a7", "0x00000000000000000000000000000000"],
-  },
-]);
-
 async function deployToken() {
+  // Load environment variables
+  const PRIVATEKEY = process.env.PRIVATEKEY!;
+  const UP_ADDRESS = process.env.UP_ADDRESS!;
+  const network = hre.network.name;
+  const RPC =
+    network === "mainnet"
+      ? "https://rpc.mainnet.lukso.network"
+      : "https://rpc.testnet.lukso.network";
+
+  // Encode the data for the ERC725
+  const encodedData = myErc725.encodeData([
+    {
+      keyName: "LSP8TokenMetadataBaseURI",
+      value: {
+        verification: { method: "0x00000000", data: "0x" },
+        url: baseuri_IPFS,
+      },
+    },
+    {
+      keyName: "LSP4Metadata",
+      value: {
+        json: json,
+        url: metadata_IPFS,
+      },
+    },
+    {
+      keyName: "LSP4Creators[]",
+      value: [UP_ADDRESS],
+    },
+    {
+      keyName: "LSP4CreatorsMap:<address>",
+      dynamicKeyParts: [UP_ADDRESS],
+      value: ["0x01ffc9a7", "0x00000000000000000000000000000000"],
+    },
+  ]);
+
   // Setup the controller used to sign the deployment
-  const provider = new ethers.JsonRpcProvider(
-    "https://rpc.testnet.lukso.network"
-  );
-  const signer = new ethers.Wallet(process.env.PRIVATEKEY as string, provider);
+  const provider = new ethers.JsonRpcProvider(RPC);
+  const signer = new ethers.Wallet(PRIVATEKEY, provider);
 
   console.log(
     "Deploying contracts with Universal Profile Controller: ",
@@ -67,7 +75,7 @@ async function deployToken() {
   // Encode constructor params
   const encodedConstructorParams = abiEncoder.encode(
     ["bytes32[]", "bytes[]", "address"],
-    [encodedData.keys, encodedData.values, '0x7F836812D77678BBbE5A0dA28c9e4491441051CB']
+    [encodedData.keys, encodedData.values]
   );
 
   // Add the constructor params to the Custom Token bytecode
