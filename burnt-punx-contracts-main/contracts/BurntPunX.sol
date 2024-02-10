@@ -27,7 +27,7 @@ error Unauthorized();
 contract BurntPunX is LSP8IdentifiableDigitalAsset, LSP8Enumerable, ReentrancyGuard {
 
     uint256 public constant MAX_SUPPLY = 6900;
-    uint256 public constant TEAM_RESERVE = 5;
+    uint256 public constant TEAM_RESERVE = 169;
     uint256 public constant MAX_MINTABLE = 100;
     uint256 public constant PRICE = 4.2 ether;
     uint256 public constant CHILLPRICE = 6969;
