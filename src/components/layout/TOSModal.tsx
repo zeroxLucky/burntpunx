@@ -37,7 +37,7 @@ export default function TOSModal() {
       <ModalContent className="">
         <ModalBody
           onClick={setTos}
-          className="self-center border justify-center text-center max-w-lg p-4 rounded-lg"
+          className="self-center border justify-center text-center max-w-lg p-4 rounded-lg overflow-y-auto"
         >
           <div className="cursive text-4xl">A Note From The Hoodie Cartel</div>
           <div className="basker text-lg">
@@ -51,8 +51,8 @@ export default function TOSModal() {
             terminated at any time. We do not condone trading of this NFT and
             there should be no expectation that this NFT should increase in
             value, for that reason we have applied a contract enforced 6.9%
-            royalty. Please disable all alternate wallet plugins if you choose
-            to use UP! before connecting your wallet. Mint accordingly degens.
+            royalty. WARNING This mint is only available on a Universale
+            Profile. Mint accordingly degens.
           </div>
           <StayBundled />
         </ModalBody>
