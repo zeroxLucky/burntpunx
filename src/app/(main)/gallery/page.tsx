@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Gallery from "@/components/layout/Gallery";
 import { notFound } from "next/navigation";
 import { getProfile, getTokens } from "@/actions/contract";
 import GridItem from "@/components/GridItem";
@@ -21,6 +20,10 @@ export default async function Page({
   const profile = await getProfile(address);
 
   let blankTokens;
+
+  if (!profile) {
+    notFound();
+  }
 
   if (tokens.length < 12) {
     blankTokens = Array(12 - tokens.length).fill({});
