@@ -56,6 +56,11 @@ export const getTokens = async (address: string) => {
 export const getProfile = async (address: string) => {
   const erc725js = new ERC725(lsp3ProfileSchema, address, mainnet_rpc, {});
   const profile = (await erc725js.fetchData("LSP3Profile")) as LSP3ProfileT;
+
+  if (!profile) {
+    return undefined;
+  }
+
   const formattedProfile = {
     name: profile.value.LSP3Profile.name,
     description: profile.value.LSP3Profile.description,
