@@ -7,11 +7,12 @@ export const config = createConfig({
   multiInjectedProviderDiscovery: false,
   connectors: [
     injected({
+      // @ts-expect-error
       target() {
         return {
           id: "windowProvider",
           name: "Window Provider",
-          provider: (window: Window) => {
+          provider(window?: Window) {
             return window?.lukso;
           },
         };
