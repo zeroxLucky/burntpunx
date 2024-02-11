@@ -50,9 +50,9 @@ export default function TOSModal() {
             expire this offer at any time, the attached ipfs image may also be
             terminated at any time. We do not condone trading of this NFT and
             there should be no expectation that this NFT should increase in
-            value, for that reason we have applied a contract enforced 6.9%
-            royalty. WARNING This mint is only available on a Universale
-            Profile. Mint accordingly degens.
+            value, for that reason we have applied a 6.9% royalty. WARNING This
+            mint is only available on a Universale Profile. Mint accordingly
+            degens.
           </div>
           <StayBundled />
         </ModalBody>
