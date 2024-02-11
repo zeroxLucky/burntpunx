@@ -14,9 +14,13 @@ import {
   ModalBody,
   ModalFooter,
 } from "@nextui-org/react";
+import { Download } from "@/utils/icons/download";
+import { Loader } from "@/utils/icons/loader";
 interface GridItem {
-  url?: string;
+  urlSmol?: string;
+  urlLarge?: string;
   mintNumber?: number;
+  itemName?: string;
 }
 
 const Gallery = () => {
@@ -51,13 +55,21 @@ const Gallery = () => {
         const tokens = await contract.tokenIdsOf(address);
         const collection = tokens.map((token: string, i: number) => {
           const tokenNumber = parseInt(token);
-          const url = `https://ipfs.io/ipfs/QmSKbCkmib8koVyYA2Xum3hngzNCLVijFkiQBg23VHjcMV/BurntPunX_${tokenNumber}.png`;
-          return { url, mintNumber: tokenNumber };
+          const urlSmol = `https://ipfs.io/ipfs/QmSKbCkmib8koVyYA2Xum3hngzNCLVijFkiQBg23VHjcMV/BurntPunX_${tokenNumber}.png`;
+          const urlLarge = `https://ipfs.io/ipfs/QmP1MQ1d6UvNvzpfr5Brfuqfu6JDBj4Kq9kBKzaPPUZ2zA/BurntPunX_${tokenNumber}.png`;
+          return {
+            urlLarge,
+            urlSmol,
+            mintNumber: tokenNumber,
+            itemName: `BurntPunX_${tokenNumber}`,
+          };
         });
 
         setMintCollection([
           ...collection,
-          ...Array(12 - collection.length).fill({}),
+          ...Array(collection.length >= 12 ? 0 : 12 - collection.length).fill(
+            {}
+          ),
         ]);
       }
     };
@@ -69,14 +81,14 @@ const Gallery = () => {
     return (
       <>
         <button
-          onClick={item.url ? onOpen : () => {}}
+          onClick={item.itemName ? onOpen : () => {}}
           className="border rounded-md text-white relative overflow-hidden aspect-square"
         >
           <div className="tv-static" />
-          {item.url && (
+          {item.itemName && (
             <Image
-              src={item.url}
-              alt="item image"
+              src={item.urlSmol}
+              alt={item.itemName}
               width={500}
               height={500}
               className="absolute inset-0 w-full h-full object-cover"
@@ -97,14 +109,24 @@ const Gallery = () => {
           <ModalContent className="p-0 m-0 gold">
             {(onClose) => (
               <>
-                <ModalBody className="p-[2px] m-0">
+                <ModalBody className="p-[2px] m-0 relative">
+                  <Loader className="absolute" />
                   <Image
-                    src={item.url}
+                    src={item.urlLarge}
                     alt="item image"
-                    width={500}
-                    height={500}
-                    className="rounded-xl w-full h-full object-cover"
+                    width={1000}
+                    height={1000}
+                    className="z-10 rounded-xl w-full h-full object-cover"
                   />
+                  <a
+                    className="z-10 absolute p-[2px] rounded-full gold aspect-square bottom-3 left-3"
+                    href={`${item.urlLarge}?filename=BurntPunX_${item.mintNumber}.png&download=true`}
+                    download
+                  >
+                    <div className="w-full height-full aspect-square rounded-full p-2 bg-black ">
+                      <Download className="text-gold" />
+                    </div>
+                  </a>
                 </ModalBody>
               </>
             )}
