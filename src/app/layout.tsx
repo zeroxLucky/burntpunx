@@ -3,8 +3,9 @@ import "./globals.css";
 import { Providers } from "@/components/contexts/Providers";
 import { Toaster } from "sonner";
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.hoodiecartel.com/"),
   title: "Hoodie Cartel",
-  description: "UniversalPunx",
+  description: "Home to the BurntPunX Collection and the Hoodie Cartel",
 };
 
 export default function RootLayout({
@@ -17,11 +18,11 @@ export default function RootLayout({
       <body>
         <Toaster
           position="top-center"
-          theme="dark"
+          className="toaster group"
           toastOptions={{
             classNames: {
-              toast: "digital",
-              
+              toast:
+                "digital group toast group-[.toaster]:bg-black group-[.toaster]:text-[#cabd89] group-[.toaster]:text-xs group-[.toaster]:border-[2px] group-[.toaster]:border-[#cabd89] group-[.toaster]:shadow-lg",
             },
           }}
         />

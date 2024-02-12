@@ -16,8 +16,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "ipfs.io",
+        hostname: "ipfs.filebase.io",
         pathname: "/ipfs/**",
+      },
+      {
+        protocol: "https",
+        hostname: "api.universalprofile.cloud",
+        pathname: "**",
       },
     ],
   },
