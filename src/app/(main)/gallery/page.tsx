@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { getProfile, getTokens } from "@/actions/contract";
 import GridItem from "@/components/GridItem";
 import Image from "next/image";

@@ -1,7 +1,6 @@
 import Frame from "@/components/layout/Frame";
 import MintDisplay from "@/components/layout/MintDisplay";
 import ConnectButton from "@/components/ConnectButton";
-import Link from "next/link";
 import { MinterProvider } from "@/components/contexts/MinterContext";
 import CollectionButton from "@/components/CollectionButton";
 import MobileModal from "@/components/layout/MobileModal";

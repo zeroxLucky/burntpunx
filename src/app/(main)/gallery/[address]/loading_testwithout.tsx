@@ -6,6 +6,7 @@ export default function GalleryLoader() {
   const grid = blankTokens.map((token, i) => (
     <GridItem token={token} key={`grid-item-${i}`} />
   ));
+
   return (
     <div className="flex gap-3 flex-1 flex-col px-6 w-full max-w-sm h-full">
       <div className="gold p-[2px] w-full rounded-md">
