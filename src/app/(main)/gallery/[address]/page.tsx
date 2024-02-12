@@ -14,8 +14,12 @@ export async function generateMetadata({
   const { address } = params;
   const profile = await getProfile(address);
 
+  if (!profile) {
+    notFound();
+  }
+
   return {
-    title: "Gallery | " + profile?.name,
+    title: "Gallery | " + profile.name,
     description: "BurntPunX Gallery",
   };
 }

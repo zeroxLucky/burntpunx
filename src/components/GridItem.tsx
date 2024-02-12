@@ -1,7 +1,6 @@
 "use client";
 
 import { Download } from "@/utils/icons/download";
-import { Loader } from "@/utils/icons/loader";
 import {
   Modal,
   ModalBody,
@@ -9,6 +8,7 @@ import {
   useDisclosure,
 } from "@nextui-org/modal";
 import Image from "next/image";
+import Static from "./Static";
 
 export default function GridItem({ token }: { token: Token | any }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -19,7 +19,7 @@ export default function GridItem({ token }: { token: Token | any }) {
         className="gold p-[2px] rounded-md relative overflow-hidden aspect-square"
       >
         <div className="w-full h-full bg-black rounded-md relative">
-          <div className="tv-static" />
+          <Static />
           {token.name && (
             <Image
               src={token.smallPhoto}
@@ -47,7 +47,7 @@ export default function GridItem({ token }: { token: Token | any }) {
             <>
               <ModalBody className="p-[2px] m-0">
                 <div className="bg-black w-full h-full rounded-md relative overflow-hidden">
-                  <div className="tv-static" />
+                  <Static />
                   {token.name && (
                     <Image
                       src={token.largePhoto}

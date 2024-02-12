@@ -3,6 +3,7 @@
 import Counter from "@/components/Counter";
 import { useMinter } from "../contexts/MinterContext";
 import Image from "next/image";
+import Static from "../Static";
 export default function Frame() {
   const { frameImage } = useMinter();
   return (
@@ -17,9 +18,8 @@ export default function Frame() {
           className="absolute inset-0 w-full h-full object-cover"
         />
       ) : (
-        <div className="tv-static" />
+        <Static />
       )}
-
     </div>
   );
 }

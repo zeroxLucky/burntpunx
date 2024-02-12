@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "@/components/contexts/Providers";
 import { Toaster } from "sonner";
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hoodiecartel.com"),
   title: "Hoodie Cartel",
   description: "Home to the BurntPunX Collection and the Hoodie Cartel",
 };
