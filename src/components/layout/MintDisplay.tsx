@@ -37,7 +37,9 @@ const InputField = () => {
     <input
       className="placeholder-[#cabd89] w-1/3 digital outline-none text-gold text-center border rounded-md p-2 bg-transparent"
       placeholder="---"
-      type="text"
+      type="number"
+      min="1"
+      max="10"
       value={count}
       onChange={(e) => {
         setCount(e.target.value);
