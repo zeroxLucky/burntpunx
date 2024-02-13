@@ -87,9 +87,7 @@ const MintButton = () => {
             const tokens = await contract.tokenIdsOf(account.address);
             const token = tokens[tokens.length - 1];
             setFrameImage(
-              `https://ipfs.io/ipfs/QmSKbCkmib8koVyYA2Xum3hngzNCLVijFkiQBg23VHjcMV/BurntPunX_${parseInt(
-                token
-              )}.png`
+              `https://ipfs.filebase.io/ipfs/QmSKbCkmib8koVyYA2Xum3hngzNCLVijFkiQBg23VHjcMV/BurntPunX_${token}.png`
             );
           })
           .catch((e) => {

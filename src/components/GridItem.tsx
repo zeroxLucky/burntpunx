@@ -19,7 +19,7 @@ export default function GridItem({ token }: { token: Token | any }) {
         className="gold p-[2px] rounded-md relative overflow-hidden aspect-square"
       >
         <div className="w-full h-full bg-black rounded-md relative">
-          <Static />
+          {/* <Static /> */}
           {token.name && (
             <Image
               src={token.smallPhoto}
@@ -47,7 +47,7 @@ export default function GridItem({ token }: { token: Token | any }) {
             <>
               <ModalBody className="p-[2px] m-0">
                 <div className="bg-black w-full h-full rounded-md relative overflow-hidden">
-                  {/* <Static /> */}
+                  <Static />
                   {token.name && (
                     <Image
                       src={token.largePhoto}
