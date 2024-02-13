@@ -14,14 +14,14 @@ import lsp7 from "@lukso/lsp-smart-contracts/artifacts/LSP7DigitalAsset.json";
 
 const MintButton = () => {
   const account = useAccount();
-  const { count, chill, setFrameImage } = useMinter();
+  const { count, chill, setFrameImage, error } = useMinter();
   const [isPending, startTransition] = useTransition();
 
   const mint = () => {
     startTransition(async () => {
       setFrameImage("");
       try {
-        const total = parseInt(count) * 4.2;
+        const total = (parseInt(count) * 4.2).toFixed(1);
         const provider = await getEthersSigner(config);
         const contract = new ethers.Contract(
           contract_address,
@@ -106,7 +106,7 @@ const MintButton = () => {
       <>
         <button
           onClick={chill ? chillMint : mint}
-          disabled={isPending}
+          disabled={isPending || error}
           className="max-h-12 digital text-sm tracking-widest gap-1 grow p-2 text-center border text-gold col-span-4 rounded-md flex items-center justify-center"
         >
           Mint{" "}
