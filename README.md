@@ -1,4 +1,28 @@
-  This  is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+Thank you everyone who helped contribute to this project:
+
+https://twitter.com/mrmaiko
+https://twitter.com/FyzzNFT
+https://twitter.com/Official_Chonii
+https://twitter.com/aurealarcon
+https://twitter.com/b00ste_lyx
+https://twitter.com/tantodefi
+https://twitter.com/ChudBrass
+https://twitter.com/zeroxLucky
+https://twitter.com/0xnijo
+
+
+
+
+
+
+
+
+
+
+
+
+This  is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ###         Getting Started 1
 
