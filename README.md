@@ -1,5 +1,5 @@
 
-Thank you everyone who helped contribute to this project:
+Thank you everyone who helped contribute to this project: 
 
 https://twitter.com/mrmaiko
 https://twitter.com/FyzzNFT
