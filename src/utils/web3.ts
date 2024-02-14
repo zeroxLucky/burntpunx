@@ -1,3 +1,5 @@
+// Client Utils for Web3
+
 import { Config, getConnectorClient } from "@wagmi/core";
 import { BrowserProvider, JsonRpcSigner } from "ethers";
 import type { Account, Chain, Client, Transport } from "viem";
@@ -13,8 +15,6 @@ export function clientToSigner(client: Client<Transport, Chain, Account>) {
   const signer = new JsonRpcSigner(provider, account.address);
   return signer;
 }
-
-/** Action to convert a viem Wallet Client to an ethers.js Signer. */
 export async function getEthersSigner(
   config: Config,
   { chainId }: { chainId?: number } = {}

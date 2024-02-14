@@ -5,6 +5,7 @@ import Button from "@/components/ui/Button";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 
 export default function ConnectButton() {
+  // wagmi hooks for connecting wallet
   const account = useAccount();
   const { connectors, connect } = useConnect();
   const { disconnect } = useDisconnect();

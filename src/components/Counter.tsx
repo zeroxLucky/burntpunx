@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 export default function Counter() {
   const [count, setCount] = useState(0);
 
+  // get count from server action
   const get = async () => {
     const countRes = await getCount();
     if (countRes) {

@@ -99,15 +99,10 @@ contract BurntPunX is
         if (_amount > MAX_MINTABLE) revert BPunxMintingLimitExceeded(_amount);
 
         _chillContract.transfer(
-            // address from
             msg.sender,
-            // address to
             owner(),
-            // uint256 amount,
             (CHILLPRICE * _amount),
-            // bool force,
             false,
-            // bytes memory data
             ""
         );
 

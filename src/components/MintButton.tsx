@@ -2,7 +2,7 @@
 
 import { useAccount } from "wagmi";
 import { useMinter } from "./contexts/MinterContext";
-import { getEthersSigner } from "@/utils/client";
+import { getEthersSigner } from "@/utils/web3";
 import { config } from "@/config/wagmi";
 import { ethers } from "ethers";
 import { chill_address, contract_address } from "@/config/consts";
@@ -17,17 +17,23 @@ const MintButton = () => {
   const { count, chill, setFrameImage, error } = useMinter();
   const [isPending, startTransition] = useTransition();
 
+  // Mint function
   const mint = () => {
     startTransition(async () => {
       setFrameImage("");
       try {
+        // Calculate total lyx
         const total = (parseInt(count) * 4.2).toFixed(1);
         const provider = await getEthersSigner(config);
+
+        // init contract
         const contract = new ethers.Contract(
           contract_address,
           abi.abi,
           provider
         );
+
+        // call mint
         await contract
           .mint(ethers.toBigInt(parseInt(count)), {
             gasLimit: 300000,
@@ -36,8 +42,12 @@ const MintButton = () => {
           .then(async (receipt) => {
             toast.success("Minted!");
             await new Promise((resolve) => setTimeout(resolve, 10000));
+
+            // get last token minted
             const tokens = await contract.tokenIdsOf(account.address);
             const token = tokens[tokens.length - 1];
+
+            // set display image as last owned token
             setFrameImage(
               `https://ipfs.filebase.io/ipfs/QmSKbCkmib8koVyYA2Xum3hngzNCLVijFkiQBg23VHjcMV/BurntPunX_${parseInt(
                 token
@@ -53,15 +63,20 @@ const MintButton = () => {
     });
   };
 
+  // Chill Mint Function
   const chillMint = () => {
     startTransition(async () => {
       setFrameImage("");
       try {
+        // Calculate total $chill
         const total = parseInt(count) * 6969;
         const provider = await getEthersSigner(config);
+
+        // init chill contract
         const access = new ethers.Contract(chill_address, lsp7.abi, provider);
 
         try {
+          // authorize chill use
           await access.authorizeOperator(
             contract_address,
             ethers.parseEther(`${total}`),
@@ -72,20 +87,30 @@ const MintButton = () => {
           return;
         }
 
+        // init contract
         const contract = new ethers.Contract(
           contract_address,
           abi.abi,
           provider
         );
+
+        // call chill mint
         await contract
           .chillMint(ethers.toBigInt(parseInt(count)), {
             gasLimit: 300000,
           })
           .then(async (receipt) => {
             toast.success("Minted!");
+
+            // give time for transaction/block
+            // to process
             await new Promise((resolve) => setTimeout(resolve, 10000));
+
+            // get last token minted
             const tokens = await contract.tokenIdsOf(account.address);
             const token = tokens[tokens.length - 1];
+
+            // set display image as last owned token
             setFrameImage(
               `https://ipfs.filebase.io/ipfs/QmSKbCkmib8koVyYA2Xum3hngzNCLVijFkiQBg23VHjcMV/BurntPunX_${parseInt(
                 token

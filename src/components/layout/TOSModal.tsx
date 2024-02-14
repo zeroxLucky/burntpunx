@@ -1,23 +1,18 @@
 "use client";
 import { useEffect, useState } from "react";
-import Button from "@/components/ui/Button";
 import StayBundled from "@/components/Bundled";
-import {
-  Modal as NextModal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-} from "@nextui-org/modal";
+import { Modal as NextModal, ModalContent, ModalBody } from "@nextui-org/modal";
 
 export default function TOSModal() {
   const [open, setOpen] = useState(false);
 
+  // check for localstorage tos acceptance
   const setTos = () => {
     localStorage.setItem("accepted_tos", new Date().toISOString());
     setOpen(false);
   };
 
+  // toggle modal on first visit
   useEffect(() => {
     const accepted_tos = localStorage.getItem("accepted_tos");
     if (!accepted_tos) {

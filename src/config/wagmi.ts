@@ -7,6 +7,7 @@ export const config = createConfig({
   multiInjectedProviderDiscovery: false,
   connectors: [
     injected({
+      // force lukso provider `Universal Profile`
       // @ts-expect-error
       target() {
         return {

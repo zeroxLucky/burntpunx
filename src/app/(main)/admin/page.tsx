@@ -4,7 +4,7 @@ import ConnectButton from "@/components/ConnectButton";
 import Button from "@/components/ui/Button";
 import { admin_address, contract_address } from "@/config/consts";
 import { config } from "@/config/wagmi";
-import { getEthersSigner } from "@/utils/client";
+import { getEthersSigner } from "@/utils/web3";
 import { ethers } from "ethers";
 import { useAccount } from "wagmi";
 import abi from "@/config/abi.json";

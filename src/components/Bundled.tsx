@@ -1,3 +1,4 @@
+// you know the deal 🤝🫳👌🫰🏻🤙🏻
 const StayBundled = () => {
   return (
     <div className="font-serif">

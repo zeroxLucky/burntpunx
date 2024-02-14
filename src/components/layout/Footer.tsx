@@ -5,7 +5,7 @@ import commonGroundIcon from "@/utils/icons/common-ground.svg";
 
 const Footer = () => {
   return (
-    <footer className="w-full flex place-content-center justify-self-end p-3 justify-self-end">
+    <footer className="w-full flex place-content-center p-3 justify-self-end">
       <div className="flex flex-row justify-center items-center max-w-xs self-center">
         <a
           className="w-100 max-w-12 p-3"

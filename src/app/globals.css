@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
-
 :root {
   --color-primary: #cabd89;
   --color-background: #000000;

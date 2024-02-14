@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 
 export default function GridItem({ token }: { token: Token | any }) {
+  // janky grid item will optomize later
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   return (
     <>
@@ -18,7 +19,6 @@ export default function GridItem({ token }: { token: Token | any }) {
         className="gold p-[2px] rounded-md relative overflow-hidden aspect-square"
       >
         <div className="w-full h-full bg-black rounded-md relative">
-          {/* <Static /> */}
           {token.name && (
             <Image
               src={token.smallPhoto}
@@ -46,7 +46,6 @@ export default function GridItem({ token }: { token: Token | any }) {
             <>
               <ModalBody className="p-[2px] m-0">
                 <div className="bg-black w-full h-full rounded-md relative overflow-hidden">
-                  {/* <Static /> */}
                   {token.name && (
                     <Image
                       src={token.largePhoto}

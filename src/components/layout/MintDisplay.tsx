@@ -9,6 +9,9 @@ export default function MintDisplay() {
       <LYXButton />
       <InputField />
       <MintButton />
+      {/* need this to have react know 
+      when the component leaves 
+      the view area to animate in/out */}
       <AnimatePresence>
         <Error />
       </AnimatePresence>
@@ -16,6 +19,7 @@ export default function MintDisplay() {
   );
 }
 
+// swap minting between LYX and Chill
 const LYXButton = () => {
   const { chill, setChill } = useMinter();
 
@@ -31,6 +35,7 @@ const LYXButton = () => {
   );
 };
 
+// input field for minting amount
 const InputField = () => {
   const { count, setCount, setError } = useMinter();
   return (
@@ -52,6 +57,7 @@ const InputField = () => {
   );
 };
 
+// error message for minting *animated*
 const Error = () => {
   const { error } = useMinter();
 
