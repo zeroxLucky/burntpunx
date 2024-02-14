@@ -1,5 +1,4 @@
 "use client";
-
 import { getCount } from "@/actions/contract";
 import { useEffect, useState } from "react";
 

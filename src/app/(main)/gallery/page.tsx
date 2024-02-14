@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { getProfile, getTokens } from "@/actions/contract";
-import GridItem from "@/components/GridItem";
+import GridItem from "@/components/layout/GridItem";
 import Image from "next/image";
 import { useAccount } from "wagmi";
 import { useEffect, useState } from "react";

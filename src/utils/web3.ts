@@ -1,5 +1,4 @@
 // Client Utils for Web3
-
 import { Config, getConnectorClient } from "@wagmi/core";
 import { BrowserProvider, JsonRpcSigner } from "ethers";
 import type { Account, Chain, Client, Transport } from "viem";

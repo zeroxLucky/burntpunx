@@ -1,4 +1,4 @@
-import GridItem from "@/components/GridItem";
+import GridItem from "@/components/layout/GridItem";
 import Link from "next/link";
 
 export default function GalleryLoader() {

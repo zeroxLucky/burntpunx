@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import StayBundled from "@/components/Bundled";
+import StayBundled from "@/components/layout/Bundled";
 import { Modal as NextModal, ModalContent, ModalBody } from "@nextui-org/modal";
 
 export default function TOSModal() {

@@ -1,6 +1,6 @@
 "use client";
 
-import StayBundled from "@/components/Bundled";
+import StayBundled from "@/components/layout/Bundled";
 import Link from "next/link";
 
 export default function Error() {
