@@ -16,6 +16,23 @@ https://twitter.com/HoodieCartel
 https://twitter.com/UniversalPunX
 
 
+ ,ggg,        gg                                                               ,gggg,                                                 
+dP""Y8b       88                                    8I                       ,88"""Y8b,                          I8             ,dPYb,
+Yb, `88       88                                    8I                      d8"     `Y8                          I8             IP'`Yb
+ `"  88       88                                    8I   gg                d8'   8b  d8                       88888888          I8  8I
+     88aaaaaaa88                                    8I   ""               ,8I    "Y88P'                          I8             I8  8'
+     88"""""""88    ,ggggg,      ,ggggg,      ,gggg,8I   gg    ,ggg,      I8'             ,gggg,gg   ,gggggg,    I8     ,ggg,   I8 dP 
+     88       88   dP"  "Y8ggg  dP"  "Y8ggg  dP"  "Y8I   88   i8" "8i     d8             dP"  "Y8I   dP""""8I    I8    i8" "8i  I8dP  
+     88       88  i8'    ,8I   i8'    ,8I   i8'    ,8I   88   I8, ,8I     Y8,           i8'    ,8I  ,8'    8I   ,I8,   I8, ,8I  I8P   
+     88       Y8,,d8,   ,d8'  ,d8,   ,d8'  ,d8,   ,d8b,_,88,_ `YbadP'     `Yba,,_____, ,d8,   ,d8b,,dP     Y8, ,d88b,  `YbadP' ,d8b,_ 
+     88       `Y8P"Y8888P"    P"Y8888P"    P"Y8888P"`Y88P""Y8888P"Y888      `"Y8888888 P"Y8888P"`Y88P      `Y888P""Y88888P"Y8888P'"Y88
+                                                                                                                                      
+                                                                                                                                      
+                                                                                                                                      
+                                                                                                                                      
+                                                                                                                                      
+                                                                                                                                  
+
                ....                                                             .....
                :+##=                                                            -*#*:
                :*##+:                                                          :+##*:
