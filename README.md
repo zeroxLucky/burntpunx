@@ -12,6 +12,10 @@ https://twitter.com/zeroxLucky
 https://twitter.com/0xnijo
 
 
+https://twitter.com/HoodieCartel 
+https://twitter.com/UniversalPunX
+
+
 
 
 
