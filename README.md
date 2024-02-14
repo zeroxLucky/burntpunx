@@ -1,17 +1,19 @@
-https://twitter.com/HoodieCartel 
-https://twitter.com/UniversalPunX
-
-
-Thank you everyone who contributed to this repo: 
-
-https://twitter.com/mrmaiko
-https://twitter.com/FyzzNFT
-https://twitter.com/Official_Chonii
-https://twitter.com/aurealarcon
-https://twitter.com/b00ste_lyx
-https://twitter.com/tantodefi
-https://twitter.com/ChudBrass
-https://twitter.com/zeroxLucky
+<div align="center">
+    <h1>🔥BurntPunX</h1>
+</div>
+<br>
+<div align="center">
+    <a href="https://twitter.com/HoodieCartel">HoodieCartel</a> | <a href="https://twitter.com/UniversalPunX">UniversalPunX</a>
+</div>
+ <br>
+<div align="center">
+    Thank you to the PunX who contributed to this repo:
+</div>
+<br>
+<div align="center">
+    <a href="https://twitter.com/mrmaiko">mrmaiko</a> | <a href="https://twitter.com/FyzzNFT">FyzzNFT</a> | <a href="https://twitter.com/Official_Chonii">Official_Chonii</a> | <a href="https://twitter.com/aurealarcon">aurealarcon</a> | <a href="https://twitter.com/b00ste_lyx">b00ste_lyx</a> | <a href="https://twitter.com/tantodefi">tantodefi</a> | <a href="https://twitter.com/ChudBrass">ChudBrass</a> | <a href="https://twitter.com/zeroxLucky">zeroxLucky</a>
+</div>
+<br>
 
 
 
