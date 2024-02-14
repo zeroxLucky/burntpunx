@@ -1,9 +1,6 @@
-                           _  _           ___               _          _ 
-  /\  /\  ___    ___    __| |(_)  ___    / __\  __ _  _ __ | |_   ___ | |
- / /_/ / / _ \  / _ \  / _` || | / _ \  / /    / _` || '__|| __| / _ \| |
-/ __  / | (_) || (_) || (_| || ||  __/ / /___ | (_| || |   | |_ |  __/| |
-\/ /_/   \___/  \___/  \__,_||_| \___| \____/  \__,_||_|    \__| \___||_|
-                                                                         
+https://twitter.com/HoodieCartel 
+https://twitter.com/UniversalPunX
+
 
 Thank you everyone who contributed to this repo: 
 
@@ -17,8 +14,6 @@ https://twitter.com/ChudBrass
 https://twitter.com/zeroxLucky
 
 
-https://twitter.com/HoodieCartel 
-https://twitter.com/UniversalPunX
 
 
                ....                                                             .....
