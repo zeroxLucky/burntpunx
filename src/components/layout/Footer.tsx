@@ -38,6 +38,19 @@ const Footer = () => {
         <a
           className="w-100 max-w-12 p-3"
           target="_blank"
+          href="https://github.com/zeroxLucky/burntpunx"
+        >
+          <Image
+            src={`/img/git.png`}
+            alt="commond ground icon"
+            width={40}
+            height={40}
+            style={{ objectFit: "contain" }}
+          />
+        </a>
+        <a
+          className="w-100 max-w-12 p-3"
+          target="_blank"
           href="https://app.cg/c/1EzCJWsy3p/"
         >
           <Image
