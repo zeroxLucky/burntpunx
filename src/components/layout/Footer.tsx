@@ -2,6 +2,7 @@ import Image from "next/image";
 import xIcon from "@/utils/icons/x.svg";
 import discordIcon from "@/utils/icons/discord.svg";
 import commonGroundIcon from "@/utils/icons/common-ground.svg";
+import gitIcon from "@/utils/icons/git.svg";
 
 const Footer = () => {
   return (
@@ -36,15 +37,15 @@ const Footer = () => {
           />
         </a>
         <a
-          className="w-100 max-w-12 p-3"
+          className="w-100 max-w-[52px] p-3"
           target="_blank"
           href="https://github.com/zeroxLucky/burntpunx"
         >
           <Image
-            src={`/img/git.png`}
-            alt="commond ground icon"
-            width={40}
-            height={40}
+            src={gitIcon}
+            alt="github icon"
+            width={42}
+            height={42}
             style={{ objectFit: "contain" }}
           />
         </a>
