@@ -26,6 +26,7 @@ export default function GridItem({ token }: { token: Token | any }) {
               width={500}
               height={500}
               className="absolute w-full h-full object-cover rounded-md"
+              unoptimized
             />
           )}
         </div>
@@ -53,6 +54,7 @@ export default function GridItem({ token }: { token: Token | any }) {
                       width={500}
                       height={500}
                       className="absolute w-full h-full object-cover"
+                      unoptimized
                     />
                   )}
                 </div>
